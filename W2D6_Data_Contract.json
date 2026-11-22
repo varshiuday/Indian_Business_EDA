@@ -1,0 +1,29 @@
+{
+    "dataset_name": "Indian Business Dataset",
+    "table_name": "businesses",
+    "columns": {
+        "Business_ID": {
+            "data_type": "integer",
+            "required": true,
+            "unique": true,
+            "minimum_value": 1
+        },
+        "Business_Name": {
+            "data_type": "string",
+            "required": true,
+            "allow_empty": false
+        },
+        "City": {
+            "data_type": "string",
+            "required": true,
+            "allow_empty": false
+        }
+    },
+    "quality_rules": [
+        "Business_ID must not be null",
+        "Business_ID must be unique",
+        "Business_ID must be greater than zero",
+        "Business_Name must not be null or empty",
+        "City must not be null or empty"
+    ]
+}
